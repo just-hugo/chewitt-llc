@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/ico" href="assets/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- Components style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <title>Cheyanne Hewitt | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg test-animation2" id="nav">
+      <div class="container-fluid">
+        <div class="row justify-content-start py-auto my-auto ms-3">
+          <div class="col-1 py-auto my-auto pe-0" id="logo"></div>
+          <div class="col-3 hidden py-auto my-auto ps-1" id="brand">
+            <a href="index.html" class="navbar-brand">
+              <span id="name">Cheyanne Hewitt</span>
+              <span id="title">Web Developer</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <div class="container-fluid" id="masthead">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 my-auto py-auto">
+          <h1>
+            I make websites for <br />
+            <span class="header-emphasis"
+              >artists, therapists,
+              <span class="header-unemphasis">&</span> small businesses.</span
+            >
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+
+    <div class="container-fluid" id="about-container">
+      <div class="row justify-content-center" id="about">
+        <h1 class="col-12 mb-4">
+          Nice to <span class="header-emphasis">meet you.</span>
+        </h1>
+        <hr />
+
+        <div class="row">
+          <div class="col-md-3 justify-content-center d-flex mt-1">
+            <img
+              class="rounded-circle mb-3 mb-md-3"
+              id="headshot"
+              src="https://github.com/just-hugo/chewitt/blob/a9dd6ee0e44384f2839eff364e005c9179d91b5d/Untitled%20design%20(2).png?raw=true"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="col-md-9 mt-md-2">
+            <p class="">
+              I design, build, and host websites for artists, small business
+              owners, and practitioners of the helping professions — such as
+              therapists, grief counselors, or psychiatrists — who want help
+              reaching potential clients online.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <p class="">
+            Before focusing on web design, I was a software engineer and IT
+            professional with over 15 years experience in a diverse range of
+            industries, including data analytics, real estate, and the arts.
+          </p>
+        </div>
+        <div class="col-md-12">
+          <p class="">
+            I'm the first in my family to graduate college, where I earned a
+            Bachelor of Arts degree in Theatre. I received all my technical
+            training from on-the-job experience working for my parents, who
+            owned a computer repair shop and internet service provider in the
+            early 90s.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+
+    <div class="container-fluid pb-3" id="services">
+      <div class="row justify-content-center mb-5">
+        <h1 class="col-12 text-center header pt-5">
+          Website solutions
+          <span class="header-emphasis">with a personal touch.</span>
+        </h1>
+
+        <div class="col-2 col-md-3 me-3 my-auto" id="services-icon"></div>
+
+        <p class="col-10 col-md-5 large-text mt-4 mt-md-0 mb-2 my-auto">
+          Technology can be
+          <span class="subheader"> cryptic and unapproachable,</span>
+          <br />and I want to give busy professionals an alternative to figuring
+          out how to get online by themselves. <br />
+          I'm a human one-stop shop for website development, content creation,
+          and hosting.
+        </p>
+      </div>
+
+      <div class="row justify-content-center pt-3 pt-md-5" id="service-cards">
+        <div class="col-11 col-md-3 card" id="dev">
+          <div class="flip-box-front">
+            <div class="card-header">
+              <div class="col-12 mx-auto" id="dev-icon"></div>
+              <h1 class=" ">
+                Web <span class="header-emphasis">Development</span>
+              </h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                You need a website, but you’re unsure where to start. Or maybe
+                you have a concept but don't know how to code.
+              </p>
+              <p class="card-text">
+                No matter your starting point, I’ll collaborate with you to make
+                your vision a reality.
+              </p>
+              <p class="card-text">
+                From start to finish, I’ll keep you looped in — you can expect a
+                prototype website within the first week of coding.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="flip-box-back invisible">
+            <div class="card-header text-center">
+              <div class="col-12 mx-auto" id="dev-icon"></div>
+              <hr />
+              <h1 class=" ">
+                Web <span class="header-emphasis">Development</span>
+              </h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-fee">Landing Page: $1200</p>
+              <p class="card-text">
+                This
+                <a href="landing-page.html" target="_blank" class="example"
+                  >classic design</a
+                >
+                features one page with up to 5 sections.
+              </p>
+
+              <p class="card-fee">Page Sections: $150/section</p>
+              <p class="card-text">Add more sections to your page.</p>
+              <p class="card-fee">Web Pages: $1000/page</p>
+              <p class="card-text">
+                Add more pages to the landing page, each with up to 5 sections.
+              </p>
+              <p class="card-fee">Animations: $85/hour</p>
+              <p class="card-text">
+                Engage your users with well-placed animations and user
+                interactions.
+              </p>
+              <p class="card-fee">E-commerce: quoted on request</p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Go back
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-3 card" id="content">
+          <div class="flip-box-front">
+            <div class="card-header text-center">
+              <div class="col-12 mx-auto" id="content-icon"></div>
+              <h1>Web <span class="header-emphasis">Content</span></h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Cat got your tongue? A blank page can be daunting. Let me fill
+                in the blanks as your copywriter.
+              </p>
+              <p class="card-text">
+                Together, we'll iron out your messaging and create website
+                content that showcases your unique worldview and values.
+              </p>
+              <p class="card-text">
+                If you've already written your own content, I also offer editing
+                and proofreading services to add clarity, fix your grammar, and
+                catch typos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="flip-box-back invisible">
+            <div class="card-header text-center">
+              <div class="col-12 mx-auto" id="content-icon"></div>
+              <h1>Web <span class="header-emphasis">Content</span></h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-fee">Copywriting: $150/page</p>
+              <p class="card-text">
+                Together, we'll find your message and create expressive content.
+              </p>
+
+              <p class="card-fee">Editing: $120/page</p>
+              <p class="card-text">
+                Polish your rough draft with suggestions for structural and
+                wording revision.
+              </p>
+
+              <p class="card-fee">Proofreading: $100/page</p>
+              <p class="card-text">
+                Already have content prepared? I'll check your final draft for
+                typos and grammar.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Go back
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-3 card" id="hosting">
+          <div class="flip-box-front">
+            <div class="card-header text-center">
+              <div class="col-12 mx-auto" id="hosting-icon"></div>
+              <h1 class=" ">
+                Web <span class="header-emphasis">Hosting</span>
+              </h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                You have your site built. Now what? To get online, you need a
+                host.
+              </p>
+              <p class="card-text">
+                Some people prefer to set up their own host — if that’s you,
+                I’ll hand off the website code to you and you can take it from
+                there.
+              </p>
+              <p class="card-text">
+                If that sounds like a headache, I'll do it for you. Once I've
+                launched your site, I'll also handle any technical issues that
+                arise in the future.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="flip-box-back invisible">
+            <div class="card-header text-center">
+              <div class="col-12 mx-auto" id="hosting-icon"></div>
+              <h1>Web <span class="header-emphasis">Hosting</span></h1>
+              <hr />
+            </div>
+            <div class="card-body">
+              <p class="card-fee">Launch fee: $85/one-time</p>
+              <p class="card-text">Covers host setup and site launch.</p>
+
+              <p class="card-fee">Basic Hosting: $15/month</p>
+              <p class="card-text">Keeps the site live without updates.</p>
+
+              <p class="card-fee">Deluxe Hosting: $25/month</p>
+              <p class="card-text">
+                Keeps the site live, plus 2 free developer hours each month.
+              </p>
+              <p class="card-fee">Email Hosting: $5/month</p>
+              <p class="card-text">Attach a custom email to your site.</p>
+              <p class="card-fee">Developer Hours: $85/hour</p>
+              <p class="card-text">Update your site with dev hours.</p>
+            </div>
+            <div class="card-footer">
+              <button class="service-more" onclick="learnMore(this)">
+                Go back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Work -->
+    <div class="container-fluid mb-5" id="recent-work">
+      <div class="row">
+        <h1 class="col-md-12 mb-4">
+          Check out <span class="header-emphasis">my work.</span>
+        </h1>
+      </div>
+
+      <div class="row mt-4 justify-content-center">
+        <div class="row"></div>
+        <div class="col-md-2 col-3 ps-1 ps-sm-5 ps-md-5 pt-2 pb-xs-0 pb-3">
+          <img
+            src="https://raw.githubusercontent.com/just-hugo/chewitt/main/kat-4.png"
+            class="project-pic2"
+          />
+        </div>
+        <p class="col-12 col-md-7 col-xs-5 pe-3 ps-3 pt-md-4">
+          This mobile-first portfolio was designed for a theatrical researcher
+          whose primary goal was to showcase her past work.
+        </p>
+        <p class="col-8 col-md-7 col-xs-5 pe-2 pe-md-3 ps-3 pt-md-3">
+          In addition to creating the design and code, I wrote the website copy
+          and created the logo and icons.
+        </p>
+        <div
+          class="col-md-2 col-4 ps-md-3 ps-sm-5 ps-1 pt-2 pt-md-0 pe-2 pb-xs-0"
+        >
+          <div class="project-pic4"></div>
+        </div>
+
+        <div class="row mt-2 mb-2 pb-md-5">
+          <p class="col-12 text-center">
+            <a href="https://katherinequindramaturg.com/" target="_blank"
+              >See the project</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="row mt-3 justify-content-center my-5">
+        <div
+          class="col-md-2 col-3 ps-1 ps-sm-5 ps-md-5 pt-5 pt-md-0 pb-xs-0 pb-3"
+        >
+          <img
+            src="https://raw.githubusercontent.com/just-hugo/chewitt/main/bbc1.png"
+            class="project-pic2"
+          />
+        </div>
+        <p class="col-12 col-md-7 col-xs-5 pe-3 ps-3 pt-md-3">
+          An ABA therapist needed a mobile-friendly brochure website for her new
+          practice. She provided the content and I built a design around it.
+        </p>
+
+        <div class="row mt-2">
+          <p class="col-12 text-center">
+            <a href="dramaturg/index.html">See the project</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container-fluid pb-3 pb-md-0" id="contact">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9">
+          <h1>Want to work together?</h1>
+        </div>
+        <div class="col-12 col-md-9">
+          <h1 class="header-emphasis">Drop me a line to get started.</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center pt-5 mt-5 pb-1">
+        <div class="col-12 col-md-9">
+          <a
+            class="social"
+            style="text-decoration: none"
+            href="javascript: void(0)"
+            >(773) 892-1202</a
+          >
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 pb-5">
+          <a
+            class="social"
+            style="text-decoration: none"
+            href="javascript: void(0)"
+            >info@cheyannehewitt.com</a
+          >
+        </div>
+      </div>
+
+      <hr / class="mt-5 col-12 align-self-center">
+
+      <div class="row justify-content-center mt-2 pt-3 mb-3">
+        <div class="col-md-1 col-2">
+          <a href="https://www.linkedin.com/in/hewittc/" target="_blank">
+            <div class="contact-icon" id="linkedin"></div>
+          </a>
+        </div>
+
+        <div class="col-md-1 col-2">
+          <a
+            href="https://www.youtube.com/channel/UCv3vGt7-MSwMsatGKU4LRcA"
+            target="_blank"
+          >
+            <div class="contact-icon" id="youtube"></div>
+          </a>
+        </div>
+        <div class="col-md-1 col-2">
+          <a href="https://cheyannehewitt.substack.com/" target="_blank"
+            ><div class="contact-icon" id="substack"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Dependencies section -->
+    <script
+      src="../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      async=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.min.js"
+    ></script>
+
+    <!-- Flip card animations -->
+    <script>
+      function learnMore(button) {
+        var flipCard = button.closest(".card");
+        flipCard.classList.toggle("active");
+        flipCard.querySelector(".flip-box-front").classList.toggle("invisible");
+        flipCard.querySelector(".flip-box-back").classList.toggle("invisible");
+
+        // flipCard.querySelector(".flip-box-back").style.backfaceVisibility =
+        //   "visible";
+      }
+
+      function goBack(button) {
+        var flipCard = button.closest(".card");
+        flipCard.classList.toggle("active");
+        flipCard.querySelector(".flip-box-back").style.backfaceVisibility =
+          "hidden";
+        flipCard.querySelector(".flip-box-front").classList.toggle("hidden");
+      }
+    </script>
+
+    <!-- load in animations -->
+    <script>
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        var html = document.documentElement;
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || html.clientHeight) &&
+          rect.right <= (window.innerWidth || html.clientWidth)
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // get list of child elements inside body
+        var elements = document.querySelectorAll("body > *");
+
+        // check if each child element is in the viewport
+        elements.forEach(function (element) {
+          if (isInViewport(element)) {
+            console.log("Element is in the viewport:", element);
+            // Add code to make the element visible
+            element.classList.add("visible");
+          }
+        });
+
+        // Additional code can go here after processing elements
+      });
+
+      // navbar links pop up from bottom after navbar slides in
+      document
+        .querySelector(".navbar")
+        .addEventListener("animationend", (event) => {
+          document.querySelectorAll(".nav-item").forEach((link) => {
+            link.classList.remove("hidden");
+            link.classList.toggle("test-animation3");
+          });
+        });
+      // Navbar brand pops up from bottom after navbar slides in
+      document
+        .querySelector(".navbar")
+        .addEventListener("animationend", (event) => {
+          var brand = document.querySelector("#brand");
+          brand.classList.remove("hidden");
+          brand.classList.toggle("test-animation3");
+        });
+      // Navbar burger menu pops up from bottom after navbar slides in
+      document
+        .querySelector(".navbar")
+        .addEventListener("animationend", (event) => {
+          var burger = document.querySelector(".burger-menu");
+          burger.classList.remove("hidden");
+          burger.classList.toggle("test-animation3");
+        });
+
+      // Masthead Header text pops up from bottom after masthead slides in
+      document
+        .querySelector("#masthead")
+        .addEventListener("animationend", (event) => {
+          document.querySelectorAll(".header .animated").forEach((text) => {
+            text.classList.remove("hidden");
+            text.classList.toggle("test-animation3");
+          });
+        });
+      // Portfolio text pops up from bottom after Portfolio header slides in
+      document
+        .querySelector("#portfolio")
+        .addEventListener("animationend", (event) => {
+          var text = document.querySelector("#portfolio .section-heading h1");
+
+          text.classList.remove("hidden");
+          text.classList.toggle("test-animation3");
+        });
+    </script>
+  </body>
+</html>
