@@ -114,6 +114,16 @@ h1 {
   font-weight: 300;
   color: var(--test-color);
 }
+
+.nav-link {
+  font-size: 1rem;
+  color: var(--light-brown);
+}
+.nav-link:hover {
+  color: var(--off-white);
+  font-weight: 900;
+  transform: translate(1.5px, 1.5px) scale(1.1);
+}
 #masthead {
   color: var(--off-white);
   font-weight: 150;
@@ -464,7 +474,7 @@ hr {
     z-index: 2;
   }
   #recent-work h1 {
-    padding-left: 9rem;
+    padding-left: 15rem;
     padding-bottom: 2rem;
   }
   #contact {
