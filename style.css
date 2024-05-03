@@ -95,6 +95,7 @@ h1 {
   height: 11vh;
   background-color: var(--charcoal-grey);
   z-index: 3;
+  font-family: "Peignot";
 }
 #logo {
   height: 1.5rem;
