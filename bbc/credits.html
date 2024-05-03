@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+
+    <!-- SECTION: Bootstrap -->
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- SECTION: Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Credits | Beyond Behavior Consulting</title>
+  </head>
+
+  <body>
+    <div class="parallax-bg" id="background"></div>
+
+    <!-- Navigation -->
+    <div class="sidenav-bg" id="mySidenav-bg"></div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="sidenav-menu ms-2">
+        <ul>
+          <li>
+            <a href="index.html" class=" " onclick="closeNav()">Home</a>
+          </li>
+          <li>
+            <a href="index.html#services" class=" " onclick="closeNav()"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="index.html#about" class=" " onclick="closeNav()">About</a>
+          </li>
+          <li>
+            <a href="index.html#contact" class=" " onclick="closeNav()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" id="nav">
+      <div class="container-fluid">
+        <div class="row justify-content-start">
+          <div class="col ms-md-5">
+            <!-- svg logo here -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/logo.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col align-self-end">
+            <button class="burger-menu" onclick="openNav()">
+              <div class="row align-items-center">
+                <div class="col-1 burger-line1 round"></div>
+                <div class="col-1 burger-line2 round"></div>
+                <div class="col-1 burger-line3 round"></div>
+              </div>
+            </button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item col-3 me-1">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item col-3 me-1">
+                  <a class="nav-link" href="index.html#services">Services</a>
+                </li>
+                <li class="nav-item col-3 me-1">
+                  <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item col-3 me-5">
+                  <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="parallax-content">
+      <div class="masthead"></div>
+      <div class="cutoff"></div>
+      <div class="container-fluid content" id="credits">
+        <!-- Content Section 1: Our Services -->
+        <h1 class="text-center">Credits</h1>
+
+        <!-- Services Columns -->
+        <div class="row justify-content-center text-center">
+          <div class="col-7">
+            <p>
+              <a
+                href="https://www.freepik.com/free-photo/silhouette-people-happy-time_3655568.htm"
+                >Image by jcomp</a
+              >
+              on Freepik
+            </p>
+          </div>
+
+          <div class="col-7">
+            <p>
+              <a
+                href="https://www.freepik.com/free-photo/schoolchildren-reading-library_867818.htm"
+                >Image by pressfoto</a
+              >
+              on Freepik
+            </p>
+          </div>
+
+          <div class="col-7">
+            <p>
+              <a
+                href="https://www.freepik.com/free-photo/sea-cloudy-sky-during-breathtaking-colorful-sunset_11301289.htm"
+                >Image by wirestock</a
+              >
+              on Freepik
+            </p>
+          </div>
+
+          <div class="col-7">
+            <p>
+              <a
+                href="https://www.freepik.com/free-photo/wonderful-sunrise-august-morning-durdle-door-dorset-england_9971295.htm#query=jurassic&position=43&from_view=keyword&track=sph"
+                >Image by wirestock</a
+              >
+              on Freepik
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Dependencies section -->
+    <script
+      src="../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      async=""
+    ></script>
+
+    <!-- Hamburger Side Menu activation -->
+    <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px; remove scroll from body */
+      function openNav() {
+        document.getElementById("mySidenav").classList.toggle("sidenav-expand");
+        document.getElementById("mySidenav-bg").style.width = "100vw";
+        document.querySelector("body").style.overflow = "hidden";
+      }
+
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").classList.toggle("sidenav-expand");
+        document.getElementById("mySidenav-bg").style.width = "0";
+        document.querySelector("body").style.overflow = "visible";
+      }
+    </script>
+  </body>
+</html>
