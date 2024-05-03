@@ -103,26 +103,28 @@
     <!-- Services -->
 
     <div class="container-fluid pb-3" id="services">
-      <div class="row justify-content-center mb-5">
-        <h1 class="col-12 text-center header pt-5">
-          Website solutions
-          <span class="header-emphasis">with a personal touch.</span>
-        </h1>
+      <div class="services-content hidden">
+        <div class="row justify-content-center mb-5">
+          <h1 class="col-12 text-center header pt-5">
+            Website solutions
+            <span class="header-emphasis">with a personal touch.</span>
+          </h1>
 
-        <div class="col-2 col-md-3 me-3 my-auto" id="services-icon"></div>
+          <div class="col-2 col-md-3 me-3 my-auto" id="services-icon"></div>
 
-        <p class="col-10 col-md-5 large-text mt-4 mt-md-0 mb-2 my-auto">
-          Technology can be
-          <span class="subheader"> cryptic and unapproachable,</span>
-          <br />and I want to give busy professionals an alternative to figuring
-          out how to get online by themselves. <br />
-          I'm a human one-stop shop for website development, content creation,
-          and hosting.
-        </p>
+          <p class="col-10 col-md-5 large-text mt-4 mt-md-0">
+            Technology can be
+            <span class="subheader"> cryptic and unapproachable,</span>
+            <br />and I want to give busy professionals an alternative to
+            figuring out how to get online by themselves. <br />
+            I'm a human one-stop shop for website development, content creation,
+            and hosting.
+          </p>
+        </div>
       </div>
 
-      <div class="row justify-content-center pt-3 pt-md-5" id="service-cards">
-        <div class="col-11 col-md-3 card" id="dev">
+      <div class="row justify-content-center pt-3 pt-md-1" id="service-cards">
+        <div class="col-11 col-md-3 card hidden" id="dev">
           <div class="flip-box-front">
             <div class="card-header">
               <div class="col-12 mx-auto" id="dev-icon"></div>
@@ -191,7 +193,7 @@
           </div>
         </div>
 
-        <div class="col-11 col-md-3 card" id="content">
+        <div class="col-11 col-md-3 card hidden" id="content">
           <div class="flip-box-front">
             <div class="card-header text-center">
               <div class="col-12 mx-auto" id="content-icon"></div>
@@ -251,7 +253,7 @@
           </div>
         </div>
 
-        <div class="col-11 col-md-3 card" id="hosting">
+        <div class="col-11 col-md-3 card hidden" id="hosting">
           <div class="flip-box-front">
             <div class="card-header text-center">
               <div class="col-12 mx-auto" id="hosting-icon"></div>
@@ -464,57 +466,67 @@
 
     <!-- load in animations -->
     <script>
-      function isInViewport(element) {
-        var rect = element.getBoundingClientRect();
-        var html = document.documentElement;
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || html.clientHeight) &&
-          rect.right <= (window.innerWidth || html.clientWidth)
-        );
+      function isVisible(ele) {
+        const { top, bottom } = ele.getBoundingClientRect();
+        const vHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        return (top > 0 || bottom > 0) && top < vHeight;
       }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // get list of child elements inside body
+      // check if elements are in the viewport on scroll
+      window.addEventListener("scroll", (event) => {
         var elements = document.querySelectorAll("body > *");
-
-        // check if each child element is in the viewport
         elements.forEach(function (element) {
-          if (isInViewport(element)) {
-            console.log("Element is in the viewport:", element);
-            // Add code to make the element visible
-            element.classList.add("visible");
+          if (isVisible(element)) {
+            console.log("Visible Element: ", element);
           }
         });
-
-        // Additional code can go here after processing elements
       });
 
-      // Navbar logo & brand pops up from bottom
+      // get list of all elements with hidden class, check if each element is visible
+      // if services, service cards, recent work, or contact are visible, remove hidden and add fade animation
+      window.addEventListener("scroll", (event) => {
+        var elements = document.querySelectorAll(".hidden");
+
+        elements.forEach(function (element) {
+          if (isVisible(element)) {
+            if ((element.id = "services")) {
+              var services = document.querySelector(".services-content");
+
+              services.classList.remove("hidden");
+              services.classList.toggle("fade");
+            }
+            if ((element.className = ".card")) {
+              var cards = document.querySelectorAll(".card");
+              cards.forEach(function (card) {
+                card.classList.remove("hidden");
+                card.classList.toggle("fadeInUp");
+              });
+            }
+          }
+        });
+      });
+
+      // Navbar logo & brand pops up from bottom; masthead fades in; about card slides in from the bottom and fades in
       document.addEventListener("DOMContentLoaded", function () {
         var nav = document.querySelector("#nav");
         nav.classList.remove("hidden");
         nav.classList.toggle("test-animation3");
+
+        var header = document.querySelector("#header");
+        var emphasis = document.querySelector(".header-emphasis");
+        header.classList.remove("hidden");
+        header.classList.toggle("fadeInUp-animation");
+
+        emphasis.classList.remove("hidden");
+        emphasis.classList.toggle("fadeInUp-animation");
+
+        if ((header.style.opacity = 1)) {
+          about.classList.remove("hidden");
+          about.classList.toggle("fadeInUp-animation");
+        }
       });
-
-      // Masthead Header text pops up from bottom and About Card slides in
-      document
-        .querySelector("#nav")
-        .addEventListener("animationend", (event) => {
-          var header = document.querySelector("#header");
-          var emphasis = document.querySelector(".header-emphasis");
-          header.classList.remove("hidden");
-          header.classList.toggle("fade");
-
-          emphasis.classList.remove("hidden");
-          emphasis.classList.toggle("fade");
-
-          if ((header.style.opacity = 1)) {
-            about.classList.remove("hidden");
-            about.classList.toggle("fadeInUp-animation");
-          }
-        });
     </script>
   </body>
 </html>

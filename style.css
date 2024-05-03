@@ -162,7 +162,10 @@ h1 {
   z-index: 1;
   position: relative;
   display: inline-block;
-  bottom: 20dvh;
+  bottom: 10dvh;
+}
+.services-content {
+  background-color: var(--off-white);
 }
 #services h1 {
   color: var(--grey);
@@ -201,8 +204,7 @@ hr {
   border-width: 2px;
 }
 #service-cards {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 #service-cards h1 {
   color: var(--white);
@@ -533,18 +535,18 @@ hr {
   }
 }
 .fade {
-  -ms-animation: 1s fade ease;
-  -o-animation: 2s fade ease;
-  -moz-animation: 2s fade ease;
-  -webkit-animation: 2s;
-  animation: 2s fade forwards;
+  -ms-animation: 1.75s fade forwards;
+  -o-animation: 1.75s fade forwards;
+  -moz-animation: 1.75s fade forwards;
+  -webkit-animation: 1.75s;
+  animation: 1.75s fade forwards;
 }
 
 /* Fade In Up Animation */
 
 @-ms-keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {
@@ -554,7 +556,7 @@ hr {
 }
 @-o-keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {
@@ -564,7 +566,7 @@ hr {
 }
 @-moz-keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {
@@ -574,7 +576,7 @@ hr {
 }
 @-webkit-keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {
@@ -584,7 +586,7 @@ hr {
 }
 @keyframes fadeInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(3%);
     opacity: 0;
   }
   100% {
@@ -593,9 +595,9 @@ hr {
   }
 }
 .fadeInUp-animation {
-  -ms-animation: 1.75s fadeInUp;
-  -o-animation: 1.75s fadeInUp;
-  -moz-animation: 1.75s fadeInUp;
-  -webkit-animation: 1.75s fadeInUp;
-  animation: 1.75s fadeInUp;
+  -ms-animation: 1.5s fadeInUp;
+  -o-animation: 1.5s fadeInUp;
+  -moz-animation: 1.5s fadeInUp;
+  -webkit-animation: 1.5s fadeInUp;
+  animation: 1.5s fadeInUp;
 }
