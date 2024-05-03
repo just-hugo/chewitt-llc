@@ -74,6 +74,7 @@ h1 {
   font-family: "Creato Regular";
   font-size: 2rem;
   color: var(--light-brown);
+  animation-delay: 1.5s;
 }
 .header-unemphasis {
   font-family: "Creato Thin";
@@ -85,6 +86,9 @@ h1 {
 }
 .invisible {
   display: none;
+}
+.transparent {
+  opacity: 0;
 }
 .navbar {
   width: 100vw;
@@ -98,13 +102,6 @@ h1 {
   background-image: url("assets/favicon.svg");
   background-size: contain;
   background-repeat: no-repeat;
-}
-.navbar-brand {
-  font-family: "Peignot";
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: var(--off-white);
-  padding: 0;
 }
 #name {
   font-size: 1.5rem;
@@ -495,6 +492,7 @@ hr {
 .test-animation2 {
   animation: 1s test2;
 }
+/* element pops up from bottom of its own container */
 @keyframes test3 {
   0% {
     transform: scaleY(0);
@@ -502,7 +500,7 @@ hr {
     transform-origin: bottom;
   }
   50% {
-    transform: scaleY(1.1);
+    transform: scale(1.1, 1.05);
     opacity: 0.5;
     transform-origin: bottom;
   }
@@ -513,10 +511,10 @@ hr {
   }
 }
 .test-animation3 {
-  animation: 0.8s test3;
+  animation: 0.7s test3;
 }
 
-/* Fade Animation */
+/* Simple Fade In Animation */
 .animated {
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -524,6 +522,25 @@ hr {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  -ms-animation: 1s fade ease;
+  -o-animation: 2s fade ease;
+  -moz-animation: 2s fade ease;
+  -webkit-animation: 2s;
+  animation: 2s fade forwards;
+}
+
+/* Fade In Up Animation */
+
 @-ms-keyframes fadeInUp {
   0% {
     transform: translateY(100%);

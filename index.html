@@ -25,11 +25,14 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg test-animation2" id="nav">
+    <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid">
-        <div class="row justify-content-start py-auto my-auto ms-3">
+        <div
+          class="row hidden animated justify-content-start py-auto my-auto ms-3"
+          id="nav"
+        >
           <div class="col-1 py-auto my-auto pe-0" id="logo"></div>
-          <div class="col-3 hidden py-auto my-auto ps-1" id="brand">
+          <div class="col-3 py-auto my-auto ps-1" id="brand">
             <a href="index.html" class="navbar-brand">
               <span id="name">Cheyanne Hewitt</span>
               <span id="title">Web Developer</span>
@@ -44,8 +47,9 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-9 my-auto py-auto">
           <h1>
-            I make websites for <br />
-            <span class="header-emphasis"
+            <span class="hidden" id="header">I make websites for </span>
+            <br />
+            <span class="hidden header-emphasis"
               >artists, therapists,
               <span class="header-unemphasis">&</span> small businesses.</span
             >
@@ -57,7 +61,7 @@
     <!-- About -->
 
     <div class="container-fluid" id="about-container">
-      <div class="row justify-content-center" id="about">
+      <div class="row justify-content-center hidden animated" id="about">
         <h1 class="col-12 mb-4">
           Nice to <span class="header-emphasis">meet you.</span>
         </h1>
@@ -493,50 +497,43 @@
         // Additional code can go here after processing elements
       });
 
-      // navbar links pop up from bottom after navbar slides in
-      document
-        .querySelector(".navbar")
-        .addEventListener("animationend", (event) => {
-          document.querySelectorAll(".nav-item").forEach((link) => {
-            link.classList.remove("hidden");
-            link.classList.toggle("test-animation3");
-          });
-        });
-      // Navbar brand pops up from bottom after navbar slides in
-      document
-        .querySelector(".navbar")
-        .addEventListener("animationend", (event) => {
-          var brand = document.querySelector("#brand");
-          brand.classList.remove("hidden");
-          brand.classList.toggle("test-animation3");
-        });
-      // Navbar burger menu pops up from bottom after navbar slides in
-      document
-        .querySelector(".navbar")
-        .addEventListener("animationend", (event) => {
-          var burger = document.querySelector(".burger-menu");
-          burger.classList.remove("hidden");
-          burger.classList.toggle("test-animation3");
-        });
+      // Navbar logo & brand pops up from bottom
+      document.addEventListener("DOMContentLoaded", function () {
+        var nav = document.querySelector("#nav");
+        nav.classList.remove("hidden");
+        nav.classList.toggle("test-animation3");
+      });
 
       // Masthead Header text pops up from bottom after masthead slides in
       document
-        .querySelector("#masthead")
+        .querySelector("#nav")
         .addEventListener("animationend", (event) => {
-          document.querySelectorAll(".header .animated").forEach((text) => {
-            text.classList.remove("hidden");
-            text.classList.toggle("test-animation3");
-          });
-        });
-      // Portfolio text pops up from bottom after Portfolio header slides in
-      document
-        .querySelector("#portfolio")
-        .addEventListener("animationend", (event) => {
-          var text = document.querySelector("#portfolio .section-heading h1");
+          var header = document.querySelector("#header");
+          var emphasis = document.querySelector(".header-emphasis");
+          header.classList.remove("hidden");
+          header.classList.toggle("fade");
 
-          text.classList.remove("hidden");
-          text.classList.toggle("test-animation3");
+          emphasis.classList.remove("hidden");
+          emphasis.classList.toggle("fade");
+
+          if ((header.style.opacity = 1)) {
+            about.classList.remove("hidden");
+            about.classList.toggle("fadeInUp-animation");
+          }
         });
+      // document
+      //   .querySelector("#header")
+      //   .addEventListener("animationend", (event) => {
+      //     var about = document.querySelector("#about");
+
+      //     var header = document.querySelector("#header");
+
+      //     if ((header.style.opacity = 1)) {
+      //       console.log("here");
+      //       about.classList.remove("hidden");
+      //       about.classList.toggle("fade");
+      //     }
+      //   });
     </script>
   </body>
 </html>
