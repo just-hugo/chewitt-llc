@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <!-- Components style -->
     <link rel="stylesheet" href="style.css" />
@@ -439,7 +439,7 @@
 
     <!-- Bootstrap JavaScript Dependencies section -->
     <script
-      src="../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      src="node_modules/bootstrap/dist/js/bootstrap.min.js"
       async=""
     ></script>
     <script
@@ -504,7 +504,7 @@
         nav.classList.toggle("test-animation3");
       });
 
-      // Masthead Header text pops up from bottom after masthead slides in
+      // Masthead Header text pops up from bottom and About Card slides in from
       document
         .querySelector("#nav")
         .addEventListener("animationend", (event) => {
@@ -521,19 +521,6 @@
             about.classList.toggle("fadeInUp-animation");
           }
         });
-      // document
-      //   .querySelector("#header")
-      //   .addEventListener("animationend", (event) => {
-      //     var about = document.querySelector("#about");
-
-      //     var header = document.querySelector("#header");
-
-      //     if ((header.style.opacity = 1)) {
-      //       console.log("here");
-      //       about.classList.remove("hidden");
-      //       about.classList.toggle("fade");
-      //     }
-      //   });
     </script>
   </body>
 </html>
