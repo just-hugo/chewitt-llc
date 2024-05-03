@@ -19,6 +19,29 @@
 
   <body>
     <!-- Navigation -->
+    <div class="sidenav-bg" id="mySidenav-bg"></div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="sidenav-menu ms-2">
+        <ul>
+          <li>
+            <a href="index.html#portfolio" class=" " onclick="closeNav()"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="index.html#about" class=" " onclick="closeNav()">About</a>
+          </li>
+          <li>
+            <a href="index.html#contact" class=" " onclick="closeNav()"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid">
         <div
@@ -34,6 +57,13 @@
           </div>
         </div>
         <div class="row justify-content-end">
+          <button class="burger-menu hidden" onclick="openNav()">
+            <div class="row align-items-center">
+              <div class="col-1 burger-line1"></div>
+              <div class="col-1 burger-line2"></div>
+              <div class="col-1 burger-line3"></div>
+            </div>
+          </button>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
               <li class="nav-item col-3 me-3">
@@ -340,7 +370,6 @@
       </div>
 
       <div class="row mt-4 justify-content-center">
-        <div class="row"></div>
         <div class="col-md-2 col-3 ps-1 ps-sm-5 ps-md-5 pt-2 pb-xs-0 pb-3">
           <img
             src="https://raw.githubusercontent.com/just-hugo/chewitt/main/kat-4.png"
@@ -457,6 +486,37 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.12.0.min.js"
     ></script>
+
+    <!-- Hamburger Side Menu activation -->
+    <script>
+      // when nav-links are collapsed AND user scrolls, remove the hidden class from the hamburger menu and add the hidden class to the navbar brand and title
+      // window.addEventListener("scroll", function () {
+      //   var navlinks = document.querySelector(".navbar-collapse");
+      //   var burger = document.querySelector(".burger-menu");
+      //   var name = document.querySelector("#name");
+      //   var title = document.querySelector("#title");
+      //   if ((navlinks.display = "none")) {
+      //     console.log("HERE");
+      //     burger.classList.remove("hidden");
+      //     name.classList.toggle("hidden");
+      //     title.classList.toggle("hidden");
+      //   }
+      // });
+
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px; remove scroll from body */
+      function openNav() {
+        document.getElementById("mySidenav").classList.toggle("sidenav-expand");
+        document.getElementById("mySidenav-bg").style.width = "100vw";
+        document.querySelector("body").style.overflow = "hidden";
+      }
+
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").classList.toggle("sidenav-expand");
+        document.getElementById("mySidenav-bg").style.width = "0";
+        document.querySelector("body").style.overflow = "visible";
+      }
+    </script>
 
     <!-- Flip card animations -->
     <script>

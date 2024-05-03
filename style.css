@@ -124,6 +124,140 @@ h1 {
   font-weight: 900;
   transform: translate(1.5px, 1.5px) scale(1.1);
 }
+
+.burger-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding-left: 0.8rem;
+  padding-right: 0.2rem;
+  margin-bottom: 0.5rem;
+  border-width: 0px;
+  border-radius: 5px;
+  background-color: white;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  border-radius: 10px;
+  border-color: black;
+}
+.burger-menu:hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  padding-left: 0.8rem;
+  padding-right: 0.1rem;
+  border-color: var(--purple);
+  transform: translate(3px, 1px) scale(1.075);
+}
+.burger-line1,
+.burger-line2,
+.burger-line3 {
+  height: 0.18rem;
+  margin: 0.19rem 0.55rem;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 1);
+  transition: 0.4s;
+  box-shadow: 2px 2.5px 1px rgba(189, 189, 189, 1);
+}
+/* The side navigation menu */
+.sidenav-bg {
+  background-color: var(--purple-clear);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Stay on top */
+  bottom: 0;
+  left: 0%;
+  overflow: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav {
+  background-color: rgba(255, 255, 255);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  height: 60%;
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  margin-top: 20%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 2;
+  /* Stay on top */
+  top: 0;
+  right: 5%;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  overflow-y: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 40px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav-menu {
+  margin-top: 1.75rem;
+}
+/* The navigation menu links */
+
+.sidenav ul {
+  padding: 0rem 1rem;
+  margin-bottom: 0rem;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.35em;
+  font-weight: 600;
+  display: block;
+  transition: 0.5s;
+  z-index: 2;
+}
+.sidenav a {
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  display: block;
+  transition: 0.5s;
+  color: rgb(0, 0, 0);
+  z-index: 2;
+}
+.sidenav-expand {
+  width: 50vw;
+  border-radius: 15px;
+  border-top: 3px solid;
+  border-left: 3px solid;
+  border-right: 7px solid;
+  border-bottom: 7px solid;
+  border-color: black;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  transform: scale(1.075);
+  color: var(--teal);
+  text-shadow: 2px 1px 1px rgb(187, 184, 184);
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  font-size: 2.75rem;
+  margin-left: 50px;
+  margin-bottom: 1rem;
+}
 #masthead {
   color: var(--off-white);
   font-weight: 150;
